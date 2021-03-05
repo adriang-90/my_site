@@ -4,8 +4,9 @@ from django.core.paginator import Paginator, EmptyPage, \
     PageNotAnInteger
 from .models import Post, Comment
 from django.views.generic import ListView
-from .forms import EmailPostForm, CommentForm
+from .forms import EmailPostForm, CommentForm, SearchForm
 from taggit.models import Tag
+from django.contrib.postgres.search import SearchVector
 
 
 def post_share(request, post_id):
@@ -93,3 +94,21 @@ def post_detail(request, year, month, day, post):
                    'new_comment': new_comment,
                    'comment_form': comment_form,
                    'similar_posts': similar_posts})
+
+
+def post_search(request):
+    form = SearchForm()
+    query = None
+    results = []
+    if 'query' in request.GET:
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            results = Post.published.annotate(
+                search=SearchVector('title', 'body'),
+            ).filter(search=query)
+    return render(request,
+                  'blog/post/search.html',
+                  {'form': form,
+                   'query': query,
+                   'results': results})
