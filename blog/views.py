@@ -6,7 +6,7 @@ from .models import Post, Comment
 from django.views.generic import ListView
 from .forms import EmailPostForm, CommentForm, SearchForm
 from taggit.models import Tag
-from django.contrib.postgres.search import SearchVector
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 
 
 def post_share(request, post_id):
@@ -25,14 +25,14 @@ def post_share(request, post_id):
                                                     'form': form})
 
 
-class PostListView(ListView):
-    """
-    Behaves similiar to post_list function.
-    """
-    queryset = Post.published.all()
-    context_object_name = 'posts'
-    paginate_by = 3
-    template_name = 'blog/post/list.html'
+# class PostListView(ListView):
+#     """
+#     Behaves similiar to post_list function.
+#     """
+#     queryset = Post.published.all()
+#     context_object_name = 'posts'
+#     paginate_by = 3
+#     template_name = 'blog/post/list.html'
 
 
 def post_list(request, tag_slug=None):
@@ -41,7 +41,7 @@ def post_list(request, tag_slug=None):
     if tag_slug:
         tag = get_object_or_404(Tag, slug=tag_slug)
         object_list = object_list.filter(tags__in=[tag])
-    paginator = Paginator(object_list, 3)  # 3 posts in each page
+    paginator = Paginator(object_list, 5)  # 5 posts in each page
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)
@@ -49,7 +49,7 @@ def post_list(request, tag_slug=None):
         # if page is not an integer deliver the first page
         posts = paginator.page(1)
     except EmptyPage:
-        # If page is out of range deliverlast page of results
+        # If page is out of range deliver last page of results
         posts = paginator.page(paginator.num_pages)
     return render(request,
                   'blog/post/list.html',
@@ -104,11 +104,18 @@ def post_search(request):
         form = SearchForm(request.GET)
         if form.is_valid():
             query = form.cleaned_data['query']
+            search_vector = SearchVector('title', 'body')
+            search_query = SearchQuery(query)
             results = Post.published.annotate(
-                search=SearchVector('title', 'body'),
-            ).filter(search=query)
+                search=search_vector,
+                rank=SearchRank(search_vector, search_query)
+            ).filter(search=search_query).order_by('-rank')
     return render(request,
                   'blog/post/search.html',
                   {'form': form,
                    'query': query,
                    'results': results})
+
+
+def blog_home(request):
+    return render(request, 'blog/base.html', {})

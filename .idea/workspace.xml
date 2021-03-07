@@ -5,12 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9612a48a-c975-4275-be07-4670df619713" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/blog/templates/blog/post/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/css/theme-1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/css/theme-2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/css/theme-3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/css/theme-4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/css/theme-5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/css/theme-6.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/css/theme-7.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/css/theme-8.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/images/about-me.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/images/blog/blog-post-banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/images/blog/blog-post-thumb-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/images/blog/blog-post-thumb-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/images/blog/blog-post-thumb-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/images/blog/blog-post-thumb-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/images/blog/blog-post-thumb-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/images/blog/blog-post-thumb-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/images/blog/blog-post-thumb-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/images/blog/blog-post-thumb-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/images/blog/blog-post-thumb-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/images/blog/blog-post-thumb-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/images/blog/blog-post-thumb-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/images/blog/blog-post-thumb-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/images/profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/images/promo-banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/js/blog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/js/demo/style-switcher.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/plugins/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/plugins/jquery-3.3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/plugins/popper.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/post/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post/latest_posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/post/latest_posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/post/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_site/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_site/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
