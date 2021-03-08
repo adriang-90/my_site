@@ -129,3 +129,7 @@ STATIC_URL = '/static/'
 # Location of static files
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'blog/static'),]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Location of images
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
