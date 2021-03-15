@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9612a48a-c975-4275-be07-4670df619713" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/None/IMG_20210122_094012.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/migrations/0005_post_imagess.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/migrations/0006_auto_20210308_2200.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/20200723_162644.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/media/images/IMG_20210104_093341.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/static/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog/static/css/blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/static/css/theme-1.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog/static/css/theme-1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/post/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/templates/blog/post/latest_posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/post/latest_posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/post/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templatetags/blog_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templatetags/blog_tags.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_site/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_site/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_site/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
