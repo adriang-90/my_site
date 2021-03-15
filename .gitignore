@@ -61,7 +61,10 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 my_site/settings.py
+<<<<<<< HEAD
 .env
+=======
+>>>>>>> cc20470b319298afbc612dd050dbc6a831745304
 
 # Flask stuff:
 instance/
