@@ -52,7 +52,7 @@ def post_list(request, tag_slug=None):
         # If page is out of range deliver last page of results
         posts = paginator.page(paginator.num_pages)
     return render(request,
-                  'blog/post/list.html',
+                  'blog/post/list1.html',
                   {'page': page,
                    'posts': posts,
                    'tag': tag})

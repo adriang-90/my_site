@@ -7,8 +7,13 @@
       <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="{{ post.imagess.url }}" alt="image">
       {% endif %}
       <div class="media-body">
-        <h3 class="title mb-1"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
-        <div class="meta mb-1"><span class="date">Published {{ post.publish }} by {{ post.author }}</span>
+        <h3 class="title mb-1">
+          <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+        </h3>
+        <div class="meta mb-1">
+          <span class="date">
+            Published {{ post.publish }} by {{ post.author }}
+          </span>
           <span class="comment">
             <a href="{{ post.get_absolute_url }}">
             {% with comments.count as total_comments %}

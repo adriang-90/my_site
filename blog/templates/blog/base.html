@@ -26,8 +26,6 @@
 </head>
 <body>
 <header class="header text-center">
-    <h1 class="blog-name pt-lg-4 mb-0"><a href="base.html">Anthony's Blog</a></h1>
-
     <nav class="navbar navbar-expand-lg navbar-dark">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
@@ -40,8 +38,10 @@
                 <img class="profile-image mb-3 rounded-circle mx-auto" src="{% static 'images/profile.png' %}"
                      alt="image">
 
-                <div class="bio mb-3">Hi, my name is Anthony Doe. Briefly introduce yourself here. You can also provide
-                    a link to the about page.<br><a href="about.html">Find out more about me</a></div><!--//bio-->
+                <div class="bio mb-3">Hi! I'am Adrian and I'm glad you're here. I hope you're going to have fun
+                    reading my posts.
+                    <br><a href="{% url 'blog:post_feed' %}"> Subscribe to my RSS feed</a>
+                </div><!--//bio-->
                 <ul class="social-list list-inline py-3 mx-auto">
                     <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
                     <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
@@ -54,14 +54,14 @@
 
             <ul class="navbar-nav flex-column text-left">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Home<span
+                    <a class="nav-link" href="{% url 'home' %}"><i class="fas fa-home fa-fw mr-2"></i>Home<span
                             class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blog-post.html"><i class="fas fa-bookmark fa-fw mr-2"></i>Blog Post</a>
+                    <a class="nav-link" href="{% url 'blog:post_list' %}"><i class="fas fa-bookmark fa-fw mr-2"></i>Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+                    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>Projects</a>
                 </li>
             </ul>
 
@@ -87,17 +87,18 @@
         </div><!--//container-->
     </section>
     <section class="blog-list px-3 py-5 p-md-5">
+    {% block page_content %}
         <div class="container">
-            {% block page_content %}
-            <h2 class="section-title font-weight-bold mb-3">
+            <h1 class="section-title font-weight-bold mb-3">
             Latest posts
-            </h2>
+            </h1>
+            <p>
             {% show_latest_posts 2 %}
             <div class="text-center py-3">
                 <a class="btn btn-primary" href="{% url 'blog:post_list' %}">
-
                     View all posts
                 </a>
+            </p>
             </div>
         </div>
         <div class="container">
@@ -108,7 +109,8 @@
                 About me
             </h2>
         </div>
-        </div>
-        {% endblock %}
+    {% endblock %}
     </section>
+</div>
+</body>
 </html>
