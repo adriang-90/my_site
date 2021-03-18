@@ -3,10 +3,21 @@
 {% block title %}{{ post.title }}{% endblock %}
 
 {% block page_content %}
-<h1>{{ post.title }}</h1>
-<p class="date">
-    Published {{ post.publish }} by {{ post.author }}
-</p>
+<div class="blog-post-header">
+    <h2 class="title mb-2">{{ post.title }}</h2>
+    <div class="meta mb-3">
+        <span class="date">
+            Published {{ post.publish }} by {{ post.author }}
+        </span>
+        <span class="comment">
+            <a href="{{ post.get_absolute_url }}#wpac-comment">
+                {% with comments.count as total_comments %}
+                {{ total.comments }} comment{{ total.comments|pluralize }}
+                {% endwith %}
+            </a>
+        </span>
+    </div>
+</div>
 {{ post.body|linebreaks }}
 <h2>Similar posts</h2>
 {% for post in similar_posts %}

@@ -34,7 +34,7 @@
                             <span class="date">
                                 Published {{ post.publish }} by {{ post.author }}
                             </span>
-                            <span class="comment" id="comments">
+                            <span class="comment">
                                 <a href="{{ post.get_absolute_url }}#wpac-comment">
                                     {% with comments.count as total_comments %}
                                     {{ total.comments }} comment{{ total_comments|pluralize }}

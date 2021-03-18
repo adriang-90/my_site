@@ -1,5 +1,5 @@
 from django import template
-from ..models import Post
+from ..models import Post, AboutMe
 from django.db.models import Count
 from django.urls import reverse
 
@@ -27,6 +27,3 @@ def get_most_commented_posts(count=5):
 @register.simple_tag
 def anchor(url_name, section_id_):
     return reverse(url_name) + '+' + section_id
-
-
-
