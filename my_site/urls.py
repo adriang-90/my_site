@@ -31,6 +31,7 @@ urlpatterns = [
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
          name='django.contrib.sitemaps.views.sitemap'),
     path('', views.blog_home, name='home'),
+    path('summernote/', include('django_summernote.urls')),
 ]
 
 if settings.DEBUG:

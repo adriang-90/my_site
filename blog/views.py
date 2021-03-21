@@ -2,7 +2,7 @@ from django.db.models import Count
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, \
     PageNotAnInteger
-from .models import Post, Comment, AboutMe
+from .models import Post, Comment
 from django.views.generic import ListView
 from .forms import EmailPostForm, CommentForm, SearchForm
 from taggit.models import Tag
@@ -52,7 +52,7 @@ def post_list(request, tag_slug=None):
         # If page is out of range deliver last page of results
         posts = paginator.page(paginator.num_pages)
     return render(request,
-                  'blog/post/list1.html',
+                  'blog/post/list.html',
                   {'page': page,
                    'posts': posts,
                    'tag': tag})
@@ -119,9 +119,3 @@ def post_search(request):
 
 def blog_home(request):
     return render(request, 'blog/base.html', {})
-
-
-def aboutme(request):
-    aboutme = AboutMe.objects.all()
-    context = {'aboutme': aboutme}
-    return render(request, 'about.html', context)

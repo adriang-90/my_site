@@ -111,6 +111,12 @@
             <h2 class="section-title font-weight-bold mb-3">
                 About me
             </h2>
+            <p>
+                {% get_about_me_post as x %}
+                {% for post in x %}
+                {{ post.body | safe }}
+                {% endfor %}
+            </p>
         </div>
     {% endblock %}
     </section>

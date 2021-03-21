@@ -18,7 +18,7 @@
         </span>
     </div>
 </div>
-{{ post.body|linebreaks }}
+{{ post.body|linebreaks | safe }}
 <h2>Similar posts</h2>
 {% for post in similar_posts %}
 <p>
