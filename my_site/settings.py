@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'django.contrib.postgres',
-    'django_summernote',
+    'django-summernote',
 ]
 
 MIDDLEWARE = [
